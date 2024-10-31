@@ -1,0 +1,51 @@
+﻿
+.chess-container {
+    position: absolute;
+    width: 74px;
+    height: 74px;   
+}
+
+.chess-board {
+    position: relative;
+    width: 850px; /* Điều chỉnh kích thước theo bàn cờ của bạn */
+    height: 850px;
+}
+
+.board-image {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.pieces-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.chess-piece {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 1;
+}
+
+    .chess-piece img {
+        width: 100%;
+        height: 100%;
+        pointer-events: none; /* Ngăn sự kiện chuột tác động vào img */
+    }
+
+    .chess-piece.selected {
+        filter: brightness(1.2);
+    }
+
+    .chess-piece.valid-move {
+        background-color: rgba(0, 255, 0, 0.3);
+    }

@@ -1,0 +1,19 @@
+﻿@model List<ChessPiece>
+
+<div class="chess-container">
+    <div class="chess-board">
+        <img src="/Images/bancotuong.jpg" alt="Bàn cờ" class="board-image" />
+        <div class="pieces-container">
+            @foreach (var piece in Model)
+            {
+                <div class="chess-piece"
+                     id="@piece.Id"
+                     style="top: @(piece.Top)px; left: @(piece.Left)px; visibility: @(string.IsNullOrEmpty(piece.Visible) ? "visible" : piece.Visible);"
+                     draggable="true">
+                    <img src="/@piece.Src" alt="@piece.Id" />
+                </div>
+
+            }
+        </div>
+    </div>
+</div>
